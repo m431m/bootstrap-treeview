@@ -12,7 +12,7 @@ A simple and elegant solution to displaying hierarchical tree structures (i.e. a
 
 ## Dependencies
 
-Where provided these are the actual versions bootstrap-treeview has been tested against.  
+Where provided these are the actual versions bootstrap-treeview has been tested against.
 
 - [Bootstrap v3.3.4 (>= 3.0.0)](http://getbootstrap.com/)
 - [jQuery v2.1.3 (>= 1.9.0)](http://jquery.com/)
@@ -158,7 +158,7 @@ The text value displayed for a given tree node, typically to the right of the no
 
 The icon displayed on a given node, typically to the left of the text.
 
-For simplicity we directly leverage [Bootstraps Glyphicons support](http://getbootstrap.com/components/#glyphicons) and as such you should provide both the base class and individual icon class separated by a space.  
+For simplicity we directly leverage [Bootstraps Glyphicons support](http://getbootstrap.com/components/#glyphicons) and as such you should provide both the base class and individual icon class separated by a space.
 
 By providing the base class you retain full control over the icons used.  If you want to use your own then just add your class to this icon field.
 
@@ -186,6 +186,11 @@ Used in conjunction with global enableLinks option to specify anchor tag URL on 
 `Boolean` `Default: true`
 
 Whether or not a node is selectable in the tree. False indicates the node should act as an expansion heading and will not fire selection events.
+
+#### hoverable
+`Boolean` `Default: true`
+
+Whether or not a node is hoverable in the tree.
 
 #### state
 `Object` `Optional`
@@ -605,7 +610,7 @@ Triggers `nodeExpanded` event; pass silent to suppress events.
 
 #### search(pattern, options)
 
-Searches the tree view for nodes that match a given string, highlighting them in the tree.  
+Searches the tree view for nodes that match a given string, highlighting them in the tree.
 
 Returns an array of matching nodes.
 
@@ -739,9 +744,11 @@ $('#tree').on('nodeSelected', function(event, data) {
 
 `nodeSelected (event, node)`  - A node is selected.
 
+`nodeHovered (event, node)`  - A node is hovered.
+
 `nodeUnchecked (event, node)`  - A node is unchecked.
 
-`nodeUnselected (event, node)`  - A node is unselected.  
+`nodeUnselected (event, node)`  - A node is unselected.
 
 `searchComplete (event, results)`  - After a search completes
 
